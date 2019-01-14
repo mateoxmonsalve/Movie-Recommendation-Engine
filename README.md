@@ -10,7 +10,7 @@ library(shinythemes)
 ui <- fluidPage(div(titlePanel("Please Enter Movie ID"), style = "color:white"),theme = shinytheme("cyborg"),
                  
                  sidebarLayout(
-                   sidebarPanel(img(src = "Netflix_Logo.png", height = 300, width = 300),
+                   sidebarPanel(img(src = "Logo.png", height = 300, width = 300),
                      selectInput("MovieID", "Select Movie", choices = movie_raw_data$id),
                      setBackgroundColor(color = "black")
                      
@@ -21,19 +21,19 @@ ui <- fluidPage(div(titlePanel("Please Enter Movie ID"), style = "color:white"),
                        tabPanel("Your Choice",
                                 div(h2("Recommendations For you"), style = "color:white"),
                                 div(strong(tableOutput("ChoiceData"),style = "color:white")),
-                                setBackgroundImage(src = "fondoNetflix.png")),
+                                setBackgroundImage(src = "photo.png")),
                      tabPanel("Results",
                      div(h2("Recommendations For you"), style = "color:white"),
                      div(strong(tableOutput("MovieData"),style = "color:white")),
-                     setBackgroundImage(src = "fondoNetflix.png")),
+                     setBackgroundImage(src = "photo.png")),
                      tabPanel("Summary",
                        div(h2("Recommendations For you"), style = "color:white"),
                        div(strong(tableOutput("SummaryData"),style = "color:white")),
-                       setBackgroundImage(src = "fondoNetflix.png")),
+                       setBackgroundImage(src = "photo.png")),
                      tabPanel("Information",
                               div(h2("Recommendations For you"), style = "color:white"),
                               div(strong(tableOutput("InformationData"),style = "color:white")),
-                              setBackgroundImage(src = "fondoNetflix.png"))
+                              setBackgroundImage(src = "photo.png"))
                    )
                   )
                  )
